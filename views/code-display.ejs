@@ -11,6 +11,7 @@
     <title>Hastebin</title>
 </head>
 <body>
+    <%- include("_button.ejs", {id: locals.id}) %>
 
     <div class="wrapper">
         <div class="line-numbers">
@@ -19,7 +20,7 @@
         <% } %> 
         </div>
         <pre>
-            <code id="code-display" class="language-plaintext"><%= code %> </code>
+            <code id="code-display" class="<%= locals.language ? `language-${locals.language}` : "" %>"><%= code %> </code>
         </pre>  
     </div>
 </body>

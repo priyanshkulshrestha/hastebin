@@ -18,7 +18,7 @@
 </head>
 <body>
     <form action="/save" method="POST">
-        <%- include("_button.ejs") %>
+        <%- include("_button.ejs", {canSave: true}) %>
         <div class="wrapper">
             <div class="line-numbers">
                 &gt;
